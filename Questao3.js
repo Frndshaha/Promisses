@@ -3,7 +3,8 @@ const listaDeUsuarios = [];
 function adicionarUsuario(id, nome, saldo) {
   return new Promise((resolve, reject) => {
     if (listaDeUsuarios.some((usuario) => usuario.id === id)) {
-      reject(new Error(`Usuário com ID ${id} já existe.`));
+      reject(new Error(`Usuário com ID ${id} já 
+      existe.`));
     } else {
       const novoUsuario = { id, nome, saldo };
       listaDeUsuarios.push(novoUsuario);
